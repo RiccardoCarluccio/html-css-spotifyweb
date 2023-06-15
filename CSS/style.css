@@ -1,3 +1,8 @@
+:root {
+  --bg-left-navbar: rgba(0,0,0,255);
+  --bg-upgrade-bar: rgba(8,11,18,255);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,12 +21,9 @@ body > * {
   border: 1px dashed red;
 }
 
-.macro-container {
-  display: flex;
-}
                     /* nav bar laterale sinistra */
 .left-nav-bar {
-  background-color: rgba(0,0,0,255);
+  background-color: var(--bg-left-navbar);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -61,3 +63,28 @@ body > * {
 }
 
                         /* barra superiore */
+.right-content-box {
+  width: 100%;
+  flex-direction: column;
+}
+
+.upgrade {
+  background-color: var(--bg-upgrade-bar);
+  width: 100%;
+  justify-content: flex-end;
+  padding: 15px 10px 25px;
+}
+
+.upgrade button {
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: var(--bg-upgrade-bar);
+  padding: 10px 45px;
+}
+
+.upgrade a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
