@@ -1,6 +1,8 @@
 :root {
   --bg-left-navbar: rgba(0,0,0,255);
   --bg-upgrade-bar: rgba(8,11,18,255);
+  --bg-main-content: rgba(20,25,34,255);
+  --text-secondary-color: rgba(125,127,132,255);
 }
 
 * {
@@ -88,3 +90,24 @@ body > * {
   font-weight: 600;
 }
 
+                        /* contenuto principale */
+                        /* contenitore principale */
+.main-content {
+  background-color: var(--bg-main-content);
+  flex-grow: 1;
+  overflow: auto;
+}
+
+                        /* categorie */
+.categories {
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+
+.categories h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--text-secondary-color);
+}
