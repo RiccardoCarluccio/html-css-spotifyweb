@@ -1,3 +1,8 @@
+/* regole generali */
+.flexbox {
+  display: flex;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

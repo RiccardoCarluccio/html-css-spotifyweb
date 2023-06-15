@@ -16,12 +16,48 @@ body > * {
   border: 1px dashed red;
 }
 
-.flexbox {
+.macro-container {
   display: flex;
 }
-
+                    /* nav bar laterale sinistra */
 .left-nav-bar {
+  background-color: rgba(0,0,0,255);
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: calc(100vh - 102px);
+  height: calc(100vh - 102px);    /* togliere i 2px di border */
+  padding: 0 12px;      /* cambiare i px in % o calc? */
 }
+
+.top-box-nav {
+  flex-direction: column;
+}
+
+.nav-box {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-box i {
+  color: white;
+}
+
+.nav-box i ~ i {
+  font-size: 20px;
+}
+
+.top-box-nav i:first-child {
+  font-size: 30px;
+  padding: 5px 0 3px;
+}
+
+.bot-box-nav i:first-child {
+  font-size: 10px;
+  margin: auto;
+}
+
+.bot-box-nav i:last-child {
+  padding-bottom: 7px;
+}
+
+                        /* barra superiore */
