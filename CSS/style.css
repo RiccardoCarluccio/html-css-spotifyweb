@@ -5,6 +5,8 @@
   --bg-player-bar: rgba(40,40,40,255);
   --text-primary-color: white;
   --text-secondary-color: rgba(125,127,132,255);
+  --progress-bar-full-color: rgba(193,193,193,255);
+  --progress-bar-empty-color: rgba(90,90,90,255);
 }
 
 * {
@@ -150,18 +152,16 @@ body > * {
 }
 
                             /* player inferiore */
+.player-box {
+  width: calc(100% / 3);
+}
+
                             /* sezione sinistra */
 .player-bar {
   background-color: var(--bg-player-bar);
   height: 100px;
   justify-content: space-between;
   align-items: center;
-}
-
-.player-bar > * {
-  min-height: 50px;
-  min-width: 50px;
-  border: 1px dashed red;       /* temp */
 }
 
 .left-box-player-bar {
@@ -180,6 +180,43 @@ body > * {
 }
 
                             /* sezione centrale */
-.superior-central-mini-box {
-  gap: 10px;
+.middle-box-player-bar {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-central-mini-box {
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-central-mini-box i:nth-child(3) {
+  font-size: 25px;
+}
+
+.bottom-central-mini-box {
+  align-items: center;
+  gap: 7px;
+}
+
+#progress-bar,
+#audio-bar {    /* la audio non si vede perchè il container non ha dimensione */
+  height: 5px;
+  flex-grow: 1;
+  background-color: var(--progress-bar-empty-color);
+  border-radius: 5px;
+}
+                              /* sezione destra */
+.right-box-player-bar {
+  align-items: center;
+}
+
+.left-box-player-bar i {
+  color: var(--progress-bar-empty-color)
+}
+
+.middle-box-player-bar,
+.right-box-player-bar {
+  color: var(--text-primary-color);
 }
