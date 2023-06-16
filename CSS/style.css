@@ -154,6 +154,7 @@ body > * {
                             /* player inferiore */
 .player-box {
   width: calc(100% / 3);
+  padding: 10px;
 }
 
                             /* sezione sinistra */
@@ -166,17 +167,28 @@ body > * {
 
 .left-box-player-bar {
   height: 70%;
-  width: calc(100% / 3);      /* da sottrarre poi il gap */
-}
-
-.mini-box {
   width: calc(100% / 3);
+  align-items: center;
+  gap: 10px;
 }
 
-.left-mini-box img {        /* bisogna allinearla. JC e AI non funzionano. Il problema dei container probabilmente deriva da quest'immagine */
-  height: 90%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+.left-mini-box img {
+  width: 35px;
+}
+
+.center-mini-box h6 {
+  font-size: 13px;
+}
+
+.center-mini-box div {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary-color)
+}
+
+.right-mini-box i {
+  width: 100%;
+  padding-left: 10px;
 }
 
                             /* sezione centrale */
@@ -186,7 +198,7 @@ body > * {
 }
 
 .top-central-mini-box {
-  gap: 20px;
+  gap: 17px;
   justify-content: center;
   align-items: center;
 }
@@ -210,6 +222,7 @@ body > * {
                               /* sezione destra */
 .right-box-player-bar {
   align-items: center;
+  gap: 10px;
 }
 
 .left-box-player-bar i {
