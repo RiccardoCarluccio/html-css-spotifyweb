@@ -1,4 +1,18 @@
-/* regole generali */
+/* regole generali di tag */
+a {
+  text-decoration: none;
+}
+
+h2,
+h3 {
+  color: var(--text-primary-color);
+}
+
+h5 {
+  color: var(--text-secondary-color);
+}
+
+/* regole generali di classe*/
 .flexbox {
   display: flex;
 }
