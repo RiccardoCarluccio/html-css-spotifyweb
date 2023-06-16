@@ -2,6 +2,7 @@
   --bg-left-navbar: rgba(0,0,0,255);
   --bg-upgrade-bar: rgba(8,11,18,255);
   --bg-main-content: rgba(20,25,34,255);
+  --bg-player-bar: rgba(40,40,40,255);
   --text-primary-color: white;
   --text-secondary-color: rgba(125,127,132,255);
 }
@@ -122,12 +123,15 @@ body > * {
 
 .row {
   margin: 1.5rem 0 0;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .col {
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 2 - 5px);
+  width: calc(100% / 2 - 10px);
+  margin: auto;
 }
 
 .col img {
@@ -143,4 +147,39 @@ body > * {
 .col h5 {
   font-size: 12px;
   padding-top: 7px;
+}
+
+                            /* player inferiore */
+                            /* sezione sinistra */
+.player-bar {
+  background-color: var(--bg-player-bar);
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-bar > * {
+  min-height: 50px;
+  min-width: 50px;
+  border: 1px dashed red;       /* temp */
+}
+
+.left-box-player-bar {
+  height: 70%;
+  width: calc(100% / 3);      /* da sottrarre poi il gap */
+}
+
+.mini-box {
+  width: calc(100% / 3);
+}
+
+.left-mini-box img {        /* bisogna allinearla. JC e AI non funzionano. Il problema dei container probabilmente deriva da quest'immagine */
+  height: 90%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+                            /* sezione centrale */
+.superior-central-mini-box {
+  gap: 10px;
 }
